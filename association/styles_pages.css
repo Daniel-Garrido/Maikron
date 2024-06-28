@@ -29,14 +29,12 @@
     height: 565px;
     /**background: url("/assets/img1.png"),center/ cover no-repeat; **/
     position: relative;
- 
-   
  }
  
  .presentacion_filter {
   
    position: absolute;
-   top: 0;
+   top: 1rem;
    bottom: 0;
    right: 0;
    left: 0;

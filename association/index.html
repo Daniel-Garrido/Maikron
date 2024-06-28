@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My New Website</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link rel="stylesheet" href="styles_pages.css" /> <!-- Estilos específicos de páginas si es necesario -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles_pages.css">
+</head>
+<body>
+  <div id="header-container"></div>
+  <div id="content"></div>
+
   <script>
     function loadHeader() {
       const xhr = new XMLHttpRequest();
@@ -20,19 +19,16 @@
       xhr.onload = function() {
         if (xhr.status === 200) {
           document.getElementById('header-container').innerHTML = xhr.responseText;
-          // Luego de cargar el header, cargar el script header.js
-          loadScript('header.js');
-          // Cargar el contenido inicial
-          loadContent('home_page');
+          // Cargar y ejecutar header.js después de insertar el header
+          const script = document.createElement('script');
+          script.src = 'header.js';
+          script.onload = function() {
+            loadContent('home_page'); // Cargar el contenido inicial
+          };
+          document.body.appendChild(script);
         }
       };
       xhr.send();
-    }
-
-    function loadScript(scriptUrl) {
-      const script = document.createElement('script');
-      script.src = scriptUrl;
-      document.body.appendChild(script);
     }
 
     function loadContent(page) {
@@ -50,14 +46,5 @@
       loadHeader(); // Cargar el header dinámicamente
     });
   </script>
-</head>
-<body>
-  <div id="header-container">
-    <!-- Aquí se cargará dinámicamente el contenido del header -->
-  </div>
-  
-  <div id="content">
-    <!-- Aquí se cargará el contenido dinámico -->
-  </div>
 </body>
 </html>
