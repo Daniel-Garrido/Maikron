@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My New Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_pages.css" />
+  </head>
+  <body>
+    <!-- Aquí va el contenido de tu página -->
+
+  <!-- section journal -->
+  <!-- Section cards1 -->
+   
+  <section class="section_card1">
+    <div class="card1_content container" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="card1_title section_title">
+        Expand Your Peer Network, Enhance Your Professional
+        <br>
+        <span>Stature & Achieve Your Personal Career Goals </span>
+      </h2>
+      <p class="card1_description section_description">
+        Your local chapter and ISSA International will provide you with a wealth of resources to keep you current with
+        industry trends and developments in our ever-evolving field. What can we do for you today?
+      </p>
+      <ul class="card1_card--list">
+        <li class="card1_card--item" v-for="item in listCard1">
+          <card1 :src="item.src" :title="item.title" :description="item.description" />
+        </li>
+      </ul>
+    </div>
+  </section>
+  </body>
+</html>
