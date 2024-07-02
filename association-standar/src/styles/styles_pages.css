@@ -1,0 +1,340 @@
+:root {
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-source-serif-4: "Source Serif 4", serif;
+  --b-blue-primary: #043180;
+  --b-blue-secundary: #0047ba;
+  --b-blue-third: #9ae3e2;
+  --b-magenta-primary: #d1a3ff;
+  --b-magenta-secondary: #aa82fa;
+  --c-yellow-primary: #ffdea8;
+  --c-yellow-secondary: #d49d31;
+  --c-grey-primary: #856320;
+}
+/********  General  ********/
+.section_title {
+  text-align: center;
+  font-family: var(--ff-source-serif-4);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.3rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  padding: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section_description {
+  text-align: center;
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 756px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/********  Clases Section Presentacion  ********/
+.section_presentacion {
+  height: 565px;
+  position: relative;
+  overflow: hidden; /* Para asegurarse de que la imagen no se salga del contenedor */
+}
+
+.presentacion_filter {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem; /* Ajustando el bottom para dar margen */
+  right: 1rem; /* Ajustando el right para dar margen */
+  left: 1rem; /* Ajustando el left para dar margen */
+  backdrop-filter: blur(11.5px);
+  filter: brightness(30%);
+  z-index: 1;
+  background-image: url('/src/assets/img1.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  animation: moveBackground 10s linear infinite;
+}
+
+.presentacion_content {
+  z-index: 2;
+  position: absolute;
+  color: white;
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  top: 1rem;
+}
+
+.presentacion_intro {
+  text-align: center;
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.18rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.presentacion_title {
+  text-align: center;
+  color: var(--c-yellow-secondary);
+  font-family: var(--ff-montserrat);
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  max-width: 724px;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.presentacion_description {
+  text-align: center;
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  max-width: 692px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1120px) {
+  .presentacion_content {
+      padding: 120px 90px;
+  }
+
+  .presentacion_title {
+      font-size: 3rem;
+      max-width: 100%;
+  }
+
+  .presentacion_description {
+      font-size: 1rem;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .presentacion_content {
+      padding: 100px 60px;
+  }
+
+  .presentacion_title {
+      font-size: 2.5rem;
+      max-width: 100%;
+  }
+
+  .presentacion_description {
+      font-size: 0.9rem;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .presentacion_content {
+      padding: 80px 30px;
+  }
+
+  .presentacion_title {
+      font-size: 2rem;
+  }
+
+  .presentacion_description {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .presentacion_content {
+      padding: 60px 20px;
+  }
+
+  .presentacion_intro {
+      font-size: 1rem;
+  }
+
+  .presentacion_title {
+      font-size: 1.5rem;
+      max-width: 340px;
+  }
+
+  .presentacion_description {
+      font-size: 0.8rem;
+      max-width: 320px;
+  }
+}
+
+/********  Clases Section Card1  ********/
+
+.section_card1 {
+  padding-top: 3rem;
+}
+
+.card1_title {
+  color: var(--b-blue-third);
+  backdrop-filter: blur(11.5px);
+  filter: brightness(90%);
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+}
+
+.card1_title span {
+  color: var(--b-magenta-secondary);
+}
+
+.card1_description {
+  color: var(--b-blue-third);
+  backdrop-filter: blur(11.5px);
+  filter: brightness(90%);
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.card1_card--list {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card_container {
+  width: 100%;
+  box-shadow: 3px 4px 24px 0px rgba(0, 0, 0, 0.03);
+}
+
+.card_img {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  filter: grayscale();
+  margin-bottom: 1.8rem;
+}
+
+.card_img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.card_title {
+  color: var(--b-blue-third);
+  font-family: var(--ff-source-serif-4);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 1.2rem;
+  padding: 0 1.7rem;
+}
+
+.card_description {
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 1.7rem;
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 750px) {
+  .card1__card--list {
+      flex-direction: column;
+  }
+}
+
+
+/********  Clases Section Projects  ********/
+/**contenedor de la sección proyectos */
+
+.section__projects {
+  background-color: #242526; /* Color de fondo original */
+  color: #D2D2D2; /* Color de texto original */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.projects__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--c-yellow-secondary);
+}
+
+.projects__description {
+  font-size: 1rem; /* Font size for smaller screens */
+  font-family: var(--ff-montserrat);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0 1.2rem;
+  color: #D2D2D2;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.projects__content {
+ 
+  margin-bottom: 2rem;
+}
+
+/* media query para el titulo y subtitulo de la seccion de proyectos */
+@media (max-width: 400px) {
+  .projects__title{
+    font-size: 1.5rem;
+  }
+  .projects__description {
+    font-size: 0.9rem;
+    padding: 0px;
+  }
+
+  .projects__content{
+    margin-bottom: 0rem
+  }
+}
+
+
+/* Ajuste general para todos los párrafos en la página */
+/*p {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.section__projects{
+  background-color: #242526;
+  padding-block: 2rem 5rem;
+  /* border: 1px solid green; */
+
+
+.projects__title{
+  color: var(--c-yellow-secondary);
+}
+
+.projects__description{
+  color: #D2D2D2;
+}
