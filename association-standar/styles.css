@@ -142,7 +142,7 @@ header {
 .navbar .links .dropdown li a {
   display: block;
   padding: 12px 16px;
-  color: var(--c-grey-primary);
+  color: var(--c-yellow-secondary);
   text-decoration: none;
 }
 
@@ -196,7 +196,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 440px;
+  height: 390px;
 }
 
 .dropdown_menu li {
