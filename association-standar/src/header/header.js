@@ -19,14 +19,19 @@ aboutMenus.forEach(menu => {
     actionBtn.onclick = function(e) {
       e.preventDefault();
       dropdown.classList.toggle('open');
-
-      // Cerrar el menú desplegable al hacer clic en un enlace del menú "About"
-      const links = dropdown.querySelectorAll('a');
-      links.forEach(link => {
-        link.onclick = function() {
-          dropdown.classList.remove('open');
-        };
-      });
     };
+
+    // Manejar clics en los enlaces del menú desplegable
+    const links = dropdown.querySelectorAll('a');
+    links.forEach(link => {
+      link.onclick = function(e) {
+        e.preventDefault();
+        dropdown.classList.remove('open');
+        const contentPath = link.getAttribute('href');
+        loadContent(contentPath); // Ajusta esto según cómo cargues el contenido dinámicamente
+      };
+    });
   }
 });
+
+
