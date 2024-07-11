@@ -136,7 +136,6 @@ header {
 
 .navbar .links .dropdown li {
   width: 100px;
-
 }
 
 .navbar .links .dropdown li a {
@@ -235,3 +234,17 @@ header {
     width: unset;
   }
 }
+
+/* Footer styles */
+#footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Cambiado a relative para que no sea fixed */
+  bottom: 0;
+  width: 100%;
+  z-index: 100; /* Asegura que esté por encima del contenido */
+  clear: both; /* Asegura que el footer se coloque correctamente debajo del contenido */
+}
+

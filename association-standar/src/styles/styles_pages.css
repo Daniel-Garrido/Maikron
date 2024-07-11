@@ -37,7 +37,7 @@
 
 /********  Clases Section Presentacion  ********/
 .section_presentacion {
-  height: 565px;
+  height: 565px; /*min-height: 100vh;  Ajusta la altura mínima según el viewport */
   position: relative;
   overflow: hidden; /* Para asegurarse de que la imagen no se salga del contenedor */
 }
@@ -403,13 +403,4 @@
     padding: 0 1rem; 
   }
 
-  .contact__social--link {
-    width: 45px; /* Tamaño del enlace para pantallas pequeñas */
-    height: 45px; /* Tamaño del enlace para pantallas pequeñas */
-  }
-
-  .contact__icon-large {
-    width: 20px; /* Tamaño del icono grande en pantallas pequeñas */
-    height: 20px; /* Tamaño del icono grande en pantallas pequeñas */
-  }
 }

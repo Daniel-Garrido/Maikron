@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="/src/styles/styles_pages.css">
 </head>
 <body>
-  <div id="header-container"></div>
-  <div id="content"></div>
+  <div id="container">
+    <div id="header-container"></div>
+    <div id="content"></div>
+  </div>
+  <div id="footer-container"></div>
 
   <script>
     function loadHeader() {
@@ -44,6 +47,9 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       loadHeader(); // Cargar el header dinámicamente
+      // Cargar el footer de manera estática
+      const footer = document.getElementById('footer-container');
+      footer.innerHTML = '<iframe src="src/pages/footer.html" frameborder="0" width="100%" height="100"></iframe>';
     });
   </script>
 </body>
