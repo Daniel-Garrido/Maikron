@@ -10,6 +10,15 @@
   --c-yellow-secondary: #d49d31;
   --c-grey-primary: #856320;
 }
+.linea{
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1px;
+  text-decoration: none;
+  border: none;
+  background-color: var(--c-yellow-secondary);
+}
 /********  General  ********/
 .section_title {
   text-align: center;
@@ -269,37 +278,131 @@
   }
 }
 
+/* ----------------------- */
+
+.card__container{
+ 
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1rem 2rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.card__img{
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.card__img img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.text__container{
+  padding: 1.4rem 1.2rem 0 1.2rem;
+}
+
+
+.card__title{
+  color: var(--c-yellow-secondary);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 1.2rem;
+  padding: 0 1.7rem;
+  
+}
+
+.card__description{
+  text-align: justify;
+  color: #0e0d0d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 1.7rem;
+}
+
+
+/**media query para la seccion de eventos */
+@media (max-width: 750px) {
+  .card__container {
+
+    margin: auto;
+    width: 95%;
+    flex-direction: column;
+
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .card__img {
+    width: 90%;
+    flex-shrink: 0;
+  }
+
+  .card__title {
+
+    font-size: 1rem;
+    font-weight: 700;
+
+
+  }
+
+  .card__description {
+    font-size: 0.8rem;
+  }
+
+
+}
+
 
 /********  Clases Section Projects  ********/
 /**contenedor de la sección proyectos */
 
 .section__projects {
-  background-color: #242526; /* Color de fondo original */
-  color: #D2D2D2; /* Color de texto original */
+  background-color: white; /* Color de fondo original */
   padding: 2rem 1rem;
   text-align: center;
 }
 
 .projects__title {
+  margin: auto;
+  width: 85%;
+  text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: var(--c-yellow-secondary);
 }
 
 .projects__description {
-  font-size: 1rem; /* Font size for smaller screens */
+  width: 85%;
+  margin: auto;
+  
+  text-align: justify;
+  font-size: 1.2rem; /* Font size for smaller screens */
   font-family: var(--ff-montserrat);
   font-weight: 400;
   line-height: 1.5;
+  color: black;
   padding: 0 1.2rem;
-  color: #D2D2D2;
-  max-width: 100%;
-  word-wrap: break-word;
+}
+.projects__content p{
+  color: #0e0d0d;
 }
 
 .projects__content {
- 
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 
