@@ -10,15 +10,6 @@
   --c-yellow-secondary: #d49d31;
   --c-grey-primary: #856320;
 }
-.linea{
-  margin: auto;
-  margin-top: 1rem;
-  width: 100%;
-  padding: 1px;
-  text-decoration: none;
-  border: none;
-  background-color: var(--c-yellow-secondary);
-}
 /********  General  ********/
 .section_title {
   text-align: center;
@@ -201,6 +192,16 @@
 
 /********  Clases Section Card1  ********/
 
+
+.journal {
+  text-align: center;
+  font-family: var(--ff-source-serif-4);
+  font-size: 3rem; /* Tamaño de fuente */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--c-yellow-primary);
+  animation: fadeIn 2s ease-in-out;
+}
 .section_card1 {
   padding-top: 3rem;
 }
@@ -278,195 +279,109 @@
   }
 }
 
-/* ----------------------- */
-
-.card__container{
- 
-  margin: auto;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2rem 1rem 2rem 1rem;
-  margin-bottom: 3rem;
+/******** Clases Section Projects ********/
+.section_projects {
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: justify; /* Alineación justificada del texto */
 }
 
-.card__img{
-  width: 30%;
-  flex-shrink: 0;
-}
-
-.card__img img{
-  width: 100%;
-  height: 100%;
-}
-
-
-.text__container{
-  padding: 1.4rem 1.2rem 0 1.2rem;
-}
-
-
-.card__title{
-  color: var(--c-yellow-secondary);
+.section_projects h2 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
+  font-family: var(--ff-source-serif-4);
+  font-size: 3rem; /* Tamaño de fuente */
   font-weight: 700;
-  line-height: 50px;
-  margin-bottom: 1.2rem;
-  padding: 0 1.7rem;
-  
+  margin-bottom: 1rem;
+  color: var(--c-yellow-primary);
 }
 
-.card__description{
+.section_projects h3 {
+  text-align: center;
+  font-family: var(--ff-source-serif-4);
+  font-size: 1.5rem; /* Tamaño de fuente */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--c-yellow-secondary);
+}
+
+.section_projects p {
   text-align: justify;
-  color: #0e0d0d;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--b-magenta-primary); /* Color de texto del párrafo */
+  font-family: var(--ff-montserrat);
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  padding: 0 1.7rem;
+  line-height: 1.5; /* Altura de línea */
+  padding: 1rem; /* Ajuste del padding */
+  max-width: 100%; /* Ancho máximo del 100% */
+  margin: 0 auto; /* Centrado horizontal */
+  box-sizing: border-box; /* Asegura que el padding no incremente el ancho */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semiopaco oscuro */
+  border-radius: 20px;
 }
 
-
-/**media query para la seccion de eventos */
-@media (max-width: 750px) {
-  .card__container {
-
-    margin: auto;
-    width: 95%;
-    flex-direction: column;
-
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 550px) {
-  .card__img {
-    width: 90%;
-    flex-shrink: 0;
-  }
-
-  .card__title {
-
-    font-size: 1rem;
-    font-weight: 700;
-
-
-  }
-
-  .card__description {
-    font-size: 0.8rem;
-  }
-
-
-}
-
-
-/********  Clases Section Projects  ********/
-/**contenedor de la sección proyectos */
-
-.section__projects {
-  background-color: white; /* Color de fondo original */
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.projects__title {
-  margin: auto;
-  width: 85%;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--c-yellow-secondary);
-}
-
-.projects__description {
-  width: 85%;
-  margin: auto;
-  
-  text-align: justify;
-  font-size: 1.2rem; /* Font size for smaller screens */
-  font-family: var(--ff-montserrat);
-  font-weight: 400;
-  line-height: 1.5;
-  color: black;
-  padding: 0 1.2rem;
-}
-.projects__content p{
-  color: #0e0d0d;
-}
-
-.projects__content {
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* media query para el titulo y subtitulo de la seccion de proyectos */
-@media (max-width: 400px) {
-  .projects__title{
-    font-size: 1.5rem;
-  }
-  .projects__description {
-    font-size: 0.9rem;
-    padding: 0px;
-  }
-
-  .projects__content{
-    margin-bottom: 0rem
-  }
-}
-
-
-/* Ajuste general para todos los párrafos en la página */
-/*p {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-.section__projects{
-  background-color: #242526;
-  padding-block: 2rem 5rem;
-  /* border: 1px solid green; */
-
-
-.projects__title{
-  color: var(--c-yellow-secondary);
-}
-
-.projects__description{
-  color: #D2D2D2;
-}
-
-/********  Clases Section About  ********/
-  
-.section__about{
-
-  /* padding-block: 5.8rem 7rem; */
-  padding-bottom: 3rem;
-}
-
-.about__content{
+.section_projects .projects_content {
   position: relative;
+  backdrop-filter: blur(11.5px);
+  filter: brightness(80%);
+  z-index: 1;
+  background-image: url('/src/assets/img1.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  animation: moveBackground 10s linear infinite;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 2rem; /* Ajuste del padding */
+  box-sizing: border-box; /* Asegura que el padding no incremente el ancho */
 }
 
-.about__title{
+/* Media query para ajustes adicionales en pantallas pequeñas */
+@media (max-width: 768px) {
+  .section_projects h2 {
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+  }
+  
+  .section_projects p {
+    padding: 0.5rem; /* Ajuste del padding en pantallas pequeñas */
+  }
+
+  .section_projects .projects_content {
+    padding: 1rem; /* Ajuste del padding en pantallas pequeñas */
+  }
+}
+
+
+
+
+/* Estilos para la Sección About */
+.section__about {
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about__content {
+  position: relative;
+  width: 100%;
+  max-width: 90%; /* Ajusta según sea necesario */
+}
+
+.about__title {
   margin-bottom: 3rem;
 }
 
-.about__content_seccion{
+.about__content_seccion {
   width: 90%;
   padding: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.22);
   box-shadow: 3px 4px 24px 0px rgba(0, 0, 0, 0.3);
 }
 
-.about__title_Text{
+.about__title_Text {
   color: var(--c-yellow-primary);
   font-family: var(--ff-source-serif-4);
   font-size: 1.5rem;
@@ -476,9 +391,10 @@
   padding: 0 1.7rem;
   text-transform: capitalize;
 }
-.about_Text{
+
+.about_Text {
   text-align: justify;
-  color: var(--c-grey-primary);
+  color: var(--c-yellow-secondary);
   font-family: var(--ff-montserrat);
   font-style: normal;
   font-weight: 400;
@@ -486,24 +402,46 @@
   padding: 0 1.7rem;
 }
 
-/**media query para la seccion de about */
+.about__image {
+  max-width: 80%; /* Reducir tamaño máximo */
+  height: auto;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20%; /* Bordess circulares */
+  object-fit: cover; /* Ajuste de la imagen */
+  margin-left: auto;
+  margin-right: auto; /* Centrar la imagen horizontalmente */
+}
+
+
+
+/* Media Query para la Sección About */
+
+@media (max-width: 400px) {
+  .about__image {
+    width: 80%; /* Reducir tamaño en pantallas pequeñas */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media (max-width: 400px) {
   .about__content_seccion {
-    width: 95%; 
-    margin: 1rem; 
-    padding: 0.5rem; 
+    width: 95%;
+    margin: 1rem auto; /* Centrado automático */
+    padding: 0.5rem;
   }
 
   .about__title_Text {
-    font-size: 1.2rem; 
-    line-height: 20px; 
-    padding: 0 1rem; 
+    font-size: 1.2rem;
+    line-height: 20px;
+    padding: 0 1rem;
   }
 
   .about_Text {
     font-size: 0.8rem;
-    line-height: 20px; 
-    padding: 0 1rem; 
+    line-height: 20px;
+    padding: 0 1rem;
   }
-
 }
