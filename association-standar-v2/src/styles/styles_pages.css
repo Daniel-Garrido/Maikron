@@ -1,0 +1,489 @@
+:root{
+  --color-fondo: #001B38;
+  --color-texto:#CEF2EF;
+  --color-fondo-2:#013974;
+}
+
+.linea{
+  
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1px;
+  text-decoration: none;
+  border: none;
+  background-color: var(  --c-yellow-secondary);
+}
+
+
+/********************  General  ********************/
+.section_title {
+  text-align: center;
+  font-family: var(--ff-source-serif-4);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.3rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  padding: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section_description {
+  text-align: center;
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 756px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/****************  Clases Section Presentacion  ******************/
+.section_presentacion {
+  height: 565px; /*min-height: 100vh;  Ajusta la altura mínima según el viewport */
+  position: relative;
+  overflow: hidden; /* Para asegurarse de que la imagen no se salga del contenedor */
+}
+
+.presentacion_filter {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem; /* Ajustando el bottom para dar margen */
+  right: 1rem; /* Ajustando el right para dar margen */
+  left: 1rem; /* Ajustando el left para dar margen */
+  backdrop-filter: blur(11.5px);
+  filter: brightness(30%);
+  z-index: 1;
+  background-image: url('/src/assets/img1.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  animation: moveBackground 10s linear infinite;
+}
+
+.presentacion_content {
+  z-index: 2;
+  position: absolute;
+  color: white;
+  padding: 150px 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  top: 1rem;
+}
+
+.presentacion_intro {
+  text-align: center;
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.18rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.presentacion_title {
+  text-align: center;
+  color: var(--c-yellow-secondary);
+  font-family: var(--ff-montserrat);
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  max-width: 724px;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.presentacion_description {
+  text-align: center;
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  max-width: 692px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1120px) {
+  .presentacion_content {
+      padding: 120px 90px;
+  }
+
+  .presentacion_title {
+      font-size: 3rem;
+      max-width: 100%;
+  }
+
+  .presentacion_description {
+      font-size: 1rem;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .presentacion_content {
+      padding: 100px 60px;
+  }
+
+  .presentacion_title {
+      font-size: 2.5rem;
+      max-width: 100%;
+  }
+
+  .presentacion_description {
+      font-size: 0.9rem;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .presentacion_content {
+      padding: 80px 30px;
+  }
+
+  .presentacion_title {
+      font-size: 2rem;
+  }
+
+  .presentacion_description {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .presentacion_content {
+      padding: 60px 20px;
+  }
+
+  .presentacion_intro {
+      font-size: 1rem;
+  }
+
+  .presentacion_title {
+      font-size: 1.5rem;
+      max-width: 340px;
+  }
+
+  .presentacion_description {
+      font-size: 0.8rem;
+      max-width: 320px;
+  }
+}
+
+
+/* --------Diseño a la seccion de eventos--------------- */
+
+/* contenido de cadaa seccion de eventos */
+.section__events{
+  width: 100%;
+  background-color: var(--color-fondo-2);
+}
+.card__container{
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 2rem 1rem;
+ 
+}
+
+.card__background{
+  background-color: var(--color-fondo);
+}
+/* estilos a las imagenes de eventos */
+.card__img{
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.card__img img{
+  width: 100%;
+  height: 100%;
+}
+
+.text__container h3{
+  color: white;
+}
+.text__container P{
+  line-height: 1.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+/**media query para la seccion de eventos */
+@media (max-width: 750px) {
+  .card__container {
+    margin: auto;
+    width: 95%;
+    flex-direction: column;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .card__img {
+    width: 90%;
+    flex-shrink: 0;
+  }
+
+  .card__title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card__description {
+    font-size: 0.8rem;
+  }
+
+}
+
+/********  Clases Section Card1  ********/
+
+
+.journal {
+  text-align: center;
+  font-family: var(--ff-source-serif-4);
+  font-size: 3rem; /* Tamaño de fuente */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--c-yellow-primary);
+  animation: fadeIn 2s ease-in-out;
+}
+.section_card1 {
+  padding-top: 3rem;
+}
+
+.card1_title {
+  color: var(--b-blue-third);
+  backdrop-filter: blur(11.5px);
+  filter: brightness(90%);
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+}
+
+.card1_title span {
+  color: var(--b-magenta-secondary);
+}
+
+.card1_description {
+  color: var(--b-blue-third);
+  backdrop-filter: blur(11.5px);
+  filter: brightness(90%);
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.card1_card--list {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card_container {
+  width: 100%;
+  box-shadow: 3px 4px 24px 0px rgba(0, 0, 0, 0.03);
+}
+
+.card_img {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  filter: grayscale();
+  margin-bottom: 1.8rem;
+}
+
+.card_img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.card_title {
+  color: var(--b-blue-third);
+  font-family: var(--ff-source-serif-4);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 1.2rem;
+  padding: 0 1.7rem;
+}
+
+.card_description {
+  color: var(--b-blue-third);
+  font-family: var(--ff-montserrat);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 1.7rem;
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 750px) {
+  .card1__card--list {
+      flex-direction: column;
+  }
+}
+
+/********  Clases Section Projects  ********/
+/**contenedor de la sección proyectos */
+
+.projects__title {
+  width: 80%;
+  text-align: left;
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.projects__description {
+  width: 80%;
+  text-align: left;
+  font-family: sans-serif;
+  padding-left: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black; 
+}
+.projects__content {
+  padding: 1.5rem;
+  background-color: var(--color-fondo-2);
+}
+
+.projects__content p{
+  padding-bottom: 1rem;
+  color: white;
+}
+
+.projects__content h2{
+  color: white;
+}
+
+.section-color{
+  background-color: var(--color-fondo);
+}
+
+
+/* media query para el titulo y subtitulo de la seccion de proyectos */
+
+@media (max-width: 400px) {
+  .projects__title{
+    font-size: 1.5rem;
+  }
+  .projects__description {
+    font-size: 0.9rem;
+    padding: 0px;
+  }
+
+  .projects__content{
+    margin-bottom: 0rem
+  }
+}
+
+
+.projects__title{
+  color: var(--c-yellow-secondary);
+}
+
+.projects__description{
+  color: #D2D2D2;
+}
+
+/************  Clases Section About  ***********/
+  
+.section__about{
+  padding-bottom: 3rem;
+}
+
+.about__content{
+  position: relative;
+}
+
+.about__title{
+  margin-bottom: 3rem;
+}
+
+.about__content_seccion{
+  width: 90%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 3px 4px 24px 0px rgba(0, 0, 0, 0.3);
+}
+
+.about__title_Text{
+  color: var(--c-yellow-primary);
+  font-family: var(--ff-source-serif-4);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 1.2rem;
+  padding: 0 1.7rem;
+  text-transform: capitalize;
+}
+.about_Text{
+  text-align: justify;
+  color: var(--c-grey-primary);
+  font-family: var(--ff-montserrat);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 1.7rem;
+}
+
+/**media query para la seccion de about */
+@media (max-width: 400px) {
+  .about__content_seccion {
+    width: 95%; 
+    margin: 1rem; 
+    padding: 0.5rem; 
+  }
+
+  .about__title_Text {
+    font-size: 1.2rem; 
+    line-height: 20px; 
+    padding: 0 1rem; 
+  }
+
+  .about_Text {
+    font-size: 0.8rem;
+    line-height: 20px; 
+    padding: 0 1rem; 
+  }
+
+}
+
+
